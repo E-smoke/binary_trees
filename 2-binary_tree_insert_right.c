@@ -19,17 +19,17 @@ return (NULL);
 }
 node->n = value;
 node->parent = parent;
-node->right = NULL;
-if (parent->left != NULL)
+node->left = NULL;
+if (parent->right != NULL)
 {
-parent->left->parent = node;
-node->left = parent->left;
-parent->left = node;
+parent->right->parent = node;
+node->right = parent->right;
+parent->right = node;
 }
 else
 {
-parent->left = node;
-node->left = NULL;
+parent->right = node;
+node->right = NULL;
 }
 return (node);
 }
