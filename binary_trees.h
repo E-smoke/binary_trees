@@ -62,4 +62,7 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 void level(queue *front, void (*func)(int));
 void left(queue **front, queue **front1, queue **end1, queue **temp);
 void right(queue **front, queue **front1, queue **end1, queue **temp);
+int binary_tree_is_complete(const binary_tree_t *tree);
+int number(queue *front1);
+bool level1(queue *front1);
 #endif
