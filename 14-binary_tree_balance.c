@@ -11,8 +11,9 @@ if (tree != NULL)
 {
 lh = binary_tree_height(tree->left);
 rh = binary_tree_height(tree->right);
-}
 return (lh - rh);
+}
+return (0);
 }
 /**
  * binary_tree_height - encapsulate
