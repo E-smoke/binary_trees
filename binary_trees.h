@@ -22,7 +22,17 @@ struct binary_tree_s *left;
 struct binary_tree_s *right;
 };
 
+
 typedef struct binary_tree_s binary_tree_t;
+
+struct queue
+{
+binary_tree_t *node;
+struct queue *next;
+struct queue *prev;
+};
+
+typedef struct queue queue;
 
 void binary_tree_print(const binary_tree_t *);
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
@@ -48,4 +58,8 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle1(binary_tree_t *node);
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
+void level(queue *front, void (*func)(int));
+void left(queue **front, queue **front1, queue **end1, queue **temp);
+void right(queue **front, queue **front1, queue **end1, queue **temp);
 #endif
